@@ -1,0 +1,20 @@
+{
+  "name": "boomar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup:api": "(cd api && npm install && knex migrate:latest && knex seed:run)",
+    "setup:extension": "(cd extension && npm install)",
+    "setup": "npm install -g knex && run-p setup:*",
+    "start:extension": "(cd extension && npm start)",
+    "start:api": "(cd api && npm start)",
+    "start": "run-p start:*"
+  },
+  "keywords": [],
+  "author": "Jose Albizures <jose@albizures.com",
+  "license": "MIT",
+  "dependencies": {
+    "npm-run-all": "^4.1.3"
+  }
+}
